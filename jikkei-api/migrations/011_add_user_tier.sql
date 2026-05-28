@@ -1,0 +1,5 @@
+-- Migration 011: SUPERSEDED — do not run.
+-- Originally added users.tier, but tier is now resolved dynamically from the
+-- existing user_subscriptions table (plan + status + period dates) via
+-- app/services/subscription_service.get_effective_tier(). No schema change needed.
+-- This file is kept only so the migration number isn't silently reused.

@@ -1,0 +1,166 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Nunito:wght@400;500;600;700;800&family=Comfortaa:wght@400;500;600;700&display=swap');
+
+/* ─────────────────────────────────────────────────────────
+   AUTH INITIALIZER — root-level boot screen
+   Renders before HomePage.css is loaded (AuthInitializer sits
+   above HomePage in the route tree), so this is intentionally
+   self-contained: same kawaii-pink kinetic language as
+   HomePage.css's .jk-auth-loading-* block, own class names
+   (ai-* prefix) and own palette values so nothing depends on
+   load order.
+   ───────────────────────────────────────────────────────── */
+
+.ai-boot-screen {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background:
+    radial-gradient(circle at 20% 15%, rgba(255, 182, 193, 0.45), transparent 55%),
+    linear-gradient(145deg, #fff0f8 0%, #fde8f5 55%, #ffd6ec 100%);
+  overflow: hidden;
+  z-index: 2000;
+  padding: 24px;
+  font-family: 'Nunito', 'Quicksand', sans-serif;
+}
+
+.ai-boot-grid {
+  position: absolute;
+  inset: -40% -20% 0 -20%;
+  background-image:
+    linear-gradient(rgba(244, 114, 182, 0.15) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(244, 114, 182, 0.15) 1px, transparent 1px);
+  background-size: 44px 44px;
+  transform: perspective(900px) rotateX(62deg) translateY(0);
+  animation: aiBootGridMove 10s linear infinite;
+  opacity: 0.5;
+  mask-image: linear-gradient(to top, rgba(0, 0, 0, 1), transparent 70%);
+  -webkit-mask-image: linear-gradient(to top, rgba(0, 0, 0, 1), transparent 70%);
+}
+
+.ai-boot-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  animation: aiBootOrbFloat 8s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+.ai-boot-orb-left {
+  width: 360px;
+  height: 360px;
+  left: -80px;
+  top: -60px;
+  background: rgba(255, 182, 193, 0.45);
+}
+.ai-boot-orb-right {
+  width: 420px;
+  height: 420px;
+  right: -120px;
+  bottom: -120px;
+  background: rgba(255, 133, 179, 0.35);
+  animation-delay: -3s;
+}
+
+.ai-boot-card {
+  position: relative;
+  width: min(480px, 100%);
+  border: 2px solid rgba(255, 133, 179, 0.85);
+  background: linear-gradient(135deg, rgba(255, 211, 225, 0.96), rgba(255, 182, 193, 0.96));
+  box-shadow: 0 12px 40px rgba(233, 30, 140, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(8px);
+  border-radius: 20px;
+  padding: 28px 30px;
+  z-index: 2;
+  text-align: center;
+}
+
+.ai-boot-mark {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  margin-bottom: 14px;
+}
+.ai-boot-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #f472b6;
+  box-shadow: 0 0 10px rgba(244, 114, 182, 0.6);
+  animation: aiBootDotPulse 1.6s ease-in-out infinite;
+}
+.ai-boot-name {
+  font-family: 'Comfortaa', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: #5a1a4a;
+  line-height: 1;
+}
+
+.ai-boot-kicker {
+  margin: 0 0 8px;
+  font-family: 'Quicksand', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  color: #7a2a62;
+  font-weight: 600;
+}
+.ai-boot-title {
+  margin: 0;
+  font-family: 'Comfortaa', sans-serif;
+  font-size: clamp(2rem, 7vw, 2.8rem);
+  line-height: 0.95;
+  letter-spacing: 0.08em;
+  color: #5a1a4a;
+}
+.ai-boot-copy {
+  margin: 14px 0 18px;
+  color: rgba(90, 26, 74, 0.65);
+  font-size: 0.9rem;
+  line-height: 1.55;
+}
+
+.ai-boot-progress {
+  position: relative;
+  width: 100%;
+  height: 6px;
+  border: 1px solid rgba(255, 133, 179, 0.5);
+  background: rgba(255, 182, 193, 0.2);
+  border-radius: 99px;
+  overflow: hidden;
+}
+.ai-boot-progress-bar {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 32%;
+  background: linear-gradient(90deg, rgba(255, 133, 179, 0.3), #f472b6, rgba(255, 214, 231, 0.95));
+  box-shadow: 0 0 18px rgba(244, 114, 182, 0.5);
+  border-radius: 99px;
+  animation: aiBootProgress 1.2s ease-in-out infinite;
+}
+
+@keyframes aiBootGridMove {
+  0%   { transform: perspective(900px) rotateX(62deg) translateY(0); }
+  100% { transform: perspective(900px) rotateX(62deg) translateY(44px); }
+}
+@keyframes aiBootOrbFloat {
+  0%   { transform: translateY(0) scale(1); }
+  100% { transform: translateY(24px) scale(1.08); }
+}
+@keyframes aiBootProgress {
+  0%   { transform: translateX(-120%); }
+  100% { transform: translateX(360%); }
+}
+@keyframes aiBootDotPulse {
+  0%, 100% { opacity: 1;   transform: scale(1); }
+  50%      { opacity: 0.4; transform: scale(0.8); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ai-boot-grid,
+  .ai-boot-orb,
+  .ai-boot-dot,
+  .ai-boot-progress-bar {
+    animation: none;
+  }
+}

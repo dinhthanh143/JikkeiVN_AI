@@ -1,0 +1,38 @@
+name: Security scan
+
+on:
+  push:
+    paths:
+      - 'jikkei-api/**'
+  schedule:
+    - cron: '0 9 * * 1'
+
+jobs:
+  security:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: jikkei-api
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install pip-audit bandit
+
+      - name: Scan for vulnerable packages
+        # pip-audit fails when dependencies map to known CVEs/advisories.
+        run: pip-audit -r requirements.txt
+
+      - name: Static security analysis
+        # -ll restricts output to medium severity+ to reduce low-value noise.
+        run: bandit -r app/ -ll --exit-zero
+
+      - name: Run security tests
+        run: |
+          pip install pytest pytest-asyncio
+          pytest tests/ -v --tb=short

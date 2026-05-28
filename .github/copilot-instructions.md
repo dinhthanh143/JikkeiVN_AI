@@ -1,0 +1,54 @@
+# Copilot Instructions — Jikkei
+- Read `jikkei/CONTENT.md` (the index) before coding; it is the source of truth and
+  links to domain docs under `jikkei/docs/`.
+- After any change, update only the relevant doc(s) in `jikkei/docs/`; update
+  `CONTENT.md` only if the index entry itself changes (new file, renamed domain, etc.).
+- When adding: packages → docs/packages.md | stores → docs/stores.md |
+  tokens → docs/tokens.md | pages → docs/pages.md | components → docs/components.md |
+  API types → docs/api.md | hooks/services → docs/hooks.md
+- If `CONTENT.md` is not updated, say why explicitly.
+- Keep FE/BE payloads and responses identical in fields, types, and nullability.
+- Use `src/services/backendApi.ts` for backend calls; no hardcoded fetches in components.
+- Document any FE/BE type aliases in `CONTENT.md`.
+- Use the nearest existing file as a reference implementation.
+- Prefer production-ready changes over prototypes.
+- TypeScript strict: no `any`, no `@ts-ignore` without a reason.
+- Components need explicit `Props` interfaces and `const` arrow syntax.
+- Prefer named exports; avoid default exports from multi-export files.
+- Import order: React → third-party → internal (`@/`) → relative.
+- Use `cn()` from `@/lib/cn` for className merging.
+- Follow existing code style; keep changes minimal and focused.
+- Tailwind first for layout and spacing; custom CSS only when needed.
+- Use CSS vars from `src/styles/theme.css`; don’t hardcode token colors.
+- Don’t change existing UI style unless the user asks.
+- For complex layering/animation, use CSS-in-JS or a dedicated stylesheet.
+- Never use inline `style={{}}` for design-system colors.
+- Keep business logic in hooks/services, not page components.
+- No `useEffect` data fetching; use TanStack Query for server state.
+- Lazy-load pages with `React.lazy()` + `Suspense`.
+- Wrap Three.js canvas components in `React.memo()`.
+- Images should use `loading="lazy"` and explicit dimensions when practical.
+- Use `useGameStore` for game state, `useAudioStore` for audio, `useAuth` for auth.
+- Never store API responses in Zustand.
+- Place files by domain: pages, ui, layout, home, game, creator, engine, store, hooks, services, types, lib, styles.
+- Never create files outside those areas without documenting the exception.
+- Interactive controls need hover, focus, and active states.
+- Use `<button>` for actions; never `<div onClick>`.
+- Use `<Link>` for internal navigation; never `<a href>` internally.
+- Forms should use React Hook Form + Zod.
+- Every async flow must show loading and error states.
+- Never use `localStorage` directly for auth/token handling.
+- Never commit `.env` or `.env.local`; only `.env.example`.
+- Never use `console.log` in production code.
+- Never add npm packages without listing them in `CONTENT.md`.
+- Never change Tailwind design tokens without updating `CONTENT.md`.
+- Never hardcode API URLs; use `import.meta.env.VITE_*`.
+- Never use raw `<img>` for character/story assets; use `useCloudinary`.
+- Never create a new Zustand store without documenting its shape in `CONTENT.md`.
+- For backend source files, add a brief top-of-file purpose comment.
+- Add short inline comments only where logic is non-obvious.
+- If an index is missing, add it to the inventory and provide SQL.
+- Before finishing, verify `tsc --noEmit`, ESLint, `CONTENT.md`, accessibility, and async states.
+- If unsure, check `CONTENT.md`, follow the nearest existing file, and flag ambiguity instead of guessing.
+- Keep this file concise, current, and easy to follow.
+- Read Claude.md before executing any tasks

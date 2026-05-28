@@ -1,0 +1,57 @@
+- generic [ref=e4]:
+  - complementary [ref=e5]:
+    - generic [ref=e6] [cursor=pointer]:
+      - generic [ref=e7]:
+        - generic [ref=e9]: JIKKEI
+        - button "Minimize taskbar" [ref=e11]: <<
+      - generic [ref=e12]: V0.1-KINETIC
+    - navigation [ref=e13]:
+      - button "◈ HOME INFO" [ref=e14] [cursor=pointer]:
+        - generic [ref=e18]:
+          - generic [ref=e19]: ◈
+          - generic [ref=e20]: HOME
+          - generic [ref=e21]: INFO
+      - button "◈ GALLERY" [ref=e22] [cursor=pointer]:
+        - generic [ref=e26]:
+          - generic [ref=e27]: ◈
+          - generic [ref=e28]: GALLERY
+      - button "⬡ COMMUNITY" [ref=e29] [cursor=pointer]:
+        - generic [ref=e33]:
+          - generic [ref=e34]: ⬡
+          - generic [ref=e35]: COMMUNITY
+      - button "☰ RANKINGS" [ref=e36] [cursor=pointer]:
+        - generic [ref=e40]:
+          - generic [ref=e41]: ☰
+          - generic [ref=e42]: RANKINGS
+      - button "■ CODEX" [ref=e43] [cursor=pointer]:
+        - generic [ref=e47]:
+          - generic [ref=e48]: ■
+          - generic [ref=e49]: CODEX
+    - generic [ref=e50]:
+      - button "Login / Sign Up" [ref=e51] [cursor=pointer]
+      - generic [ref=e54]: SYS · 13:48:28
+  - main [ref=e55]:
+    - generic [ref=e58]:
+      - heading "Login" [level=2] [ref=e61]
+      - generic [ref=e62]:
+        - generic [ref=e64]:
+          - button "Login" [ref=e65] [cursor=pointer]
+          - button "Signup" [ref=e66] [cursor=pointer]
+        - generic [ref=e67]:
+          - generic [ref=e68]:
+            - generic [ref=e69]: EMAIL / USERNAME
+            - textbox "EMAIL / USERNAME" [ref=e70]:
+              - /placeholder: Enter your Email or Username...
+              - text: test1@gmail.com
+          - generic [ref=e71]:
+            - generic [ref=e72]: PASSWORD
+            - textbox "PASSWORD" [ref=e73]:
+              - /placeholder: Enter your Password...
+              - text: "11111111"
+          - generic [ref=e81]: ⚠ Something went wrong. Please try again.
+          - generic [ref=e74]:
+            - button "Login" [ref=e75] [cursor=pointer]
+            - button "FORGOT PASSWORD?" [ref=e76] [cursor=pointer]
+    - generic [ref=e77]:
+      - generic [ref=e79]: JIKKEI · AI STORIES · CREATE YOUR CHARACTER · EXPLORE WORLDS · SHAPE YOUR ENDING · JIKKEI · AI STORIES · CREATE YOUR CHARACTER · EXPLORE WORLDS · SHAPE YOUR ENDING ·
+      - generic [ref=e80]: CONSOLE_LOG

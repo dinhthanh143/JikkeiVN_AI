@@ -1,0 +1,287 @@
+/* ── Settings Panel ─────────────────────────────────────────────────────────
+   Companion to src/styles/HomePage.css which holds the .settings-* base rules.
+   This file adds the new st-* classes for the refactored Game tab.
+   ────────────────────────────────────────────────────────────────────────── */
+
+/* ── Toggle ── */
+.st-toggle {
+  position: relative;
+  width: 42px; height: 24px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 133, 179, 0.6);
+  background: rgba(90, 26, 74, 0.18);
+  cursor: pointer;
+  padding: 0;
+  flex-shrink: 0;
+  transition: background 180ms ease;
+}
+.st-toggle--on {
+  background: linear-gradient(180deg, rgba(255, 155, 195, 1), rgba(233, 30, 140, 0.9));
+}
+.st-toggle--disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.st-toggle-knob {
+  position: absolute;
+  top: 2px; left: 2px;
+  width: 18px; height: 18px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: left 180ms cubic-bezier(0.22, 1, 0.36, 1);
+  display: block;
+}
+.st-toggle--on .st-toggle-knob {
+  left: 20px;
+}
+
+/* ── Shared label ── */
+.st-label {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.62rem;
+  letter-spacing: 0.12em;
+  font-weight: 700;
+  color: #7a2a62;
+  white-space: nowrap;
+}
+
+/* ── Slider ── */
+.st-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 4px;
+  border-radius: 999px;
+  background: linear-gradient(
+    to right,
+    rgba(233, 30, 140, 0.75) var(--pct, 80%),
+    rgba(90, 26, 74, 0.15) var(--pct, 80%)
+  );
+  outline: none;
+  cursor: pointer;
+  transition: opacity 180ms ease;
+}
+.st-slider:disabled { cursor: not-allowed; opacity: 0.35; }
+.st-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 14px; height: 14px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ffd6ec, #f472b6);
+  border: 2px solid rgba(233, 30, 140, 0.9);
+  box-shadow: 0 2px 8px rgba(233, 30, 140, 0.3);
+  cursor: pointer;
+}
+.st-slider::-moz-range-thumb {
+  width: 14px; height: 14px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ffd6ec, #f472b6);
+  border: 2px solid rgba(233, 30, 140, 0.9);
+  cursor: pointer;
+}
+.st-slider-spacer {
+  height: 4px;
+  width: 100%;
+  visibility: hidden;
+}
+
+/* ── Audio section ── */
+.st-audio-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 10px;
+}
+.st-audio-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.st-audio-row-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.st-audio-row-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.st-audio-pct {
+  font-family: var(--font-mono, monospace);
+  font-size: 0.68rem;
+  font-weight: 700;
+  color: #5a1a4a;
+  min-width: 32px;
+  text-align: right;
+  transition: opacity 180ms ease;
+}
+
+/* ── Sound type dropdown ── */
+.st-select-wrapper {
+  position: relative;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  height: 24px; /* Form matches the toggle switch height exactly */
+}
+.st-type-select {
+  -webkit-appearance: none;
+  appearance: none;
+  box-sizing: border-box;
+  height: 100%;
+  min-width: 96px;
+  padding: 0 24px 0 10px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 133, 179, 0.6);
+  background: linear-gradient(135deg, rgba(255, 236, 246, 0.98), rgba(255, 204, 226, 0.98));
+  color: #5a1a4a;
+  font-family: var(--font-display, 'Comfortaa', sans-serif);
+  font-size: 0.72rem;
+  font-weight: 700;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0 2px 8px rgba(233, 30, 140, 0.1);
+  transition: all 160ms ease;
+}
+.st-type-select:hover:not(:disabled) { 
+  border-color: rgba(233, 30, 140, 0.7); 
+  background: rgba(255, 220, 238, 0.95);
+}
+.st-type-select:focus { 
+  border-color: rgba(233, 30, 140, 0.85); 
+}
+.st-type-select:disabled { 
+  opacity: 0.45; 
+  cursor: not-allowed; 
+}
+.st-type-option {
+  background-color: #fff8fc;
+  color: #5a1a4a;
+  font-family: var(--font-display, 'Comfortaa', sans-serif);
+  font-weight: 600;
+}
+.st-type-chevron {
+  position: absolute;
+  right: 8px; 
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.6rem;
+  color: #7a2a62;
+  pointer-events: none;
+}
+
+/* ── Language grid ── */
+.st-lang-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  width: 100%;
+}
+.st-lang-btn {
+  padding: 6px 4px;
+  border-radius: 8px;
+  border: 1.5px solid rgba(255, 133, 179, 0.4);
+  background: rgba(255, 255, 255, 0.5);
+  color: #5a1a4a;
+  font-family: var(--font-ui, sans-serif);
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  transition: all 150ms ease;
+}
+.st-lang-btn:hover { border-color: rgba(244, 114, 182, 0.8); background: rgba(255, 223, 236, 0.7); }
+.st-lang-btn--active {
+  border-color: rgba(233, 30, 140, 0.85);
+  background: linear-gradient(135deg, rgba(255, 204, 226, 1), rgba(255, 155, 195, 1));
+  font-weight: 700;
+  box-shadow: 0 2px 8px rgba(233, 30, 140, 0.18);
+}
+
+/* ── Game tab grid: 2 cols on wider panels ── */
+.st-game-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  align-items: start;
+}
+/* Gameplay section spans full width (has the language grid) */
+.st-game-grid > *:nth-child(3) { grid-column: 1 / -1; }
+
+/* ── Save row ── */
+.st-save-row {
+  display: flex;
+  justify-content: flex-end;
+  padding: 4px 0 24px;
+}
+
+/* ── Compact cell grid: used by GameplaySection for AUTO PLAY + LANGUAGE.
+   Each cell is a row (label + control) rather than a stacked column —
+   missing previously, which left AUTO PLAY's label and Toggle with no
+   shared flex container, so they fell back to default block stacking
+   instead of sitting side-by-side on one row. ── */
+.st-compact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+.st-compact-cell {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+}
+.st-compact-cell--full {
+  grid-column: 1 / -1;
+}
+
+/* ── Save button ── */
+.st-save-btn {
+  padding: 9px 26px;
+  border-radius: 999px;
+  min-width: 140px;
+  font-family: var(--font-display, 'Comfortaa', sans-serif);
+  font-size: 0.86rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  transition: all 200ms ease;
+  border: 2px solid rgba(255, 133, 179, 0.95);
+  background: linear-gradient(180deg, rgba(255, 204, 226, 1), rgba(255, 155, 195, 1));
+  color: #5a1a4a;
+  box-shadow: 0 6px 16px rgba(233, 30, 140, 0.2);
+}
+.st-save-btn--saving   { opacity: 0.65; cursor: not-allowed; }
+.st-save-btn--success {
+  border-color: rgba(52, 211, 153, 0.85);
+  background: linear-gradient(180deg, rgba(167, 243, 208, 1), rgba(52, 211, 153, 1));
+  color: #064e3b;
+  box-shadow: 0 6px 16px rgba(52, 211, 153, 0.25);
+}
+.st-save-btn--error {
+  border-color: rgba(220, 38, 38, 0.85);
+  background: linear-gradient(180deg, rgba(254, 202, 202, 1), rgba(239, 68, 68, 1));
+  color: #fff;
+  box-shadow: 0 6px 16px rgba(239, 68, 68, 0.25);
+}
+
+/* ── Narrow panel fallback ── */
+@media (max-width: 640px) {
+  .st-game-grid { grid-template-columns: 1fr; }
+  .st-game-grid > *:nth-child(3) { grid-column: auto; }
+}
+
+/* ── Credits card — exhausted state (TASK-011) ──
+   Base .settings-credits-* rules live in HomePage.css; this adds the
+   "Unavailable until X" variant shown once credits_remaining hits 0. ── */
+.settings-credits-display--exhausted {
+  align-items: flex-start;
+}
+.settings-credits-unavailable {
+  font-family: var(--font-display, 'Comfortaa', sans-serif);
+  font-size: 1rem;
+  font-weight: 700;
+  color: #b45309;
+  letter-spacing: 0.02em;
+}

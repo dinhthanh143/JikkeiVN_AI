@@ -1,0 +1,412 @@
+/* ── AUTH PAGE ──────────────────────────────────────────────────────────── */
+/* Redesigned to match the Jikkei light kawaii-pink system (see HomePage.css):
+   Comfortaa/Nunito/Quicksand type, soft pink/plum palette, pill buttons,
+   layered blush shadows. Replaces the old dark neon-terminal theme, which
+   no longer matched the rest of the app. */
+
+.authx-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  width: 100%;
+  position: relative;
+}
+
+/* Soft ambient backdrop, consistent with the auth-loading screen treatment */
+.authx-bg-wrapper {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.authx-bg-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(90px);
+  animation: authxOrbFloat 10s ease-in-out infinite alternate;
+}
+
+.authx-bg-orb-1 {
+  width: 380px;
+  height: 380px;
+  top: -8%;
+  left: -8%;
+  background: rgba(255, 182, 193, 0.45);
+}
+
+.authx-bg-orb-2 {
+  width: 460px;
+  height: 460px;
+  bottom: -14%;
+  right: -10%;
+  background: rgba(255, 133, 179, 0.35);
+  animation-delay: -4s;
+}
+
+@keyframes authxOrbFloat {
+  0% { transform: translateY(0) scale(1); }
+  100% { transform: translateY(22px) scale(1.07); }
+}
+
+.authx-root {
+  width: min(440px, 100%);
+  position: relative;
+  z-index: 2;
+  animation: authxFade 420ms cubic-bezier(0.2, 0, 0, 1);
+}
+
+.authx-header {
+  margin-bottom: 22px;
+  text-align: center;
+}
+
+.authx-title-wrap {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.authx-title {
+  margin: 0;
+  font-family: var(--font-display);
+  line-height: 1;
+  letter-spacing: 0.08em;
+  font-size: clamp(2rem, 6vw, 2.6rem);
+  color: var(--plum);
+  font-weight: 700;
+}
+
+.authx-subtitle {
+  margin: 8px 0 0;
+  font-family: var(--font-ui);
+  font-size: 0.85rem;
+  color: var(--text-soft);
+  line-height: 1.5;
+}
+
+.authx-card {
+  width: 100%;
+  max-width: 440px;
+  margin: 0 auto;
+  border: 2px solid var(--card-border);
+  border-radius: 22px;
+  background: var(--card-bg);
+  box-shadow: var(--card-shadow), inset 0 1px 0 rgba(255, 255, 255, 0.7);
+  padding: 28px 28px 30px;
+  position: relative;
+}
+
+/* Mode toggle (Login / Signup): pill-segmented, matches settings-tab-row language */
+.authx-mode-box {
+  border: 2px solid rgba(255, 133, 179, 0.35);
+  background: rgba(255, 211, 225, 0.35);
+  border-radius: 999px;
+  padding: 5px;
+  margin-bottom: 20px;
+}
+
+.authx-mode {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 4px;
+}
+
+.authx-mode-btn {
+  border: none;
+  border-radius: 999px;
+  background: transparent;
+  color: var(--plum-soft);
+  padding: 10px 8px;
+  font-family: var(--font-display);
+  letter-spacing: 0.06em;
+  font-size: 0.82rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all var(--transition);
+}
+
+.authx-mode-btn:hover {
+  color: var(--plum);
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.authx-mode-btn-active {
+  background: linear-gradient(135deg, rgba(255, 182, 193, 0.98), rgba(255, 133, 179, 0.88));
+  color: var(--plum);
+  box-shadow: 0 4px 12px rgba(244, 114, 182, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+.authx-mode-btn-active:hover {
+  color: var(--plum);
+  background: linear-gradient(135deg, rgba(255, 182, 193, 0.98), rgba(255, 133, 179, 0.88));
+}
+
+.authx-form {
+  display: grid;
+  gap: 14px;
+}
+
+.authx-field {
+  display: grid;
+  gap: 6px;
+}
+
+.authx-label {
+  font-family: var(--font-mono);
+  font-size: 0.64rem;
+  letter-spacing: 0.1em;
+  color: var(--plum-soft);
+  font-weight: 700;
+}
+
+.authx-input {
+  width: 100%;
+  border: 2px solid rgba(255, 133, 179, 0.4);
+  border-radius: 12px;
+  background: rgba(255, 240, 248, 0.9);
+  color: var(--plum);
+  padding: 12px 14px;
+  outline: none;
+  font-family: var(--font-ui);
+  font-size: 0.88rem;
+  transition: border-color 220ms ease, box-shadow 220ms ease, background 220ms ease;
+}
+
+.authx-input::placeholder {
+  color: rgba(90, 26, 74, 0.4);
+}
+
+.authx-input:focus {
+  border-color: var(--pink);
+  box-shadow: 0 0 0 3px rgba(244, 114, 182, 0.15);
+  background: rgba(255, 255, 255, 0.95);
+}
+
+/* Neutralize Chrome/Edge's native autofill tint so a remembered email
+   field never looks different from the password field next to it. */
+.authx-input:-webkit-autofill,
+.authx-input:-webkit-autofill:hover,
+.authx-input:-webkit-autofill:focus {
+  -webkit-text-fill-color: var(--plum);
+  -webkit-box-shadow: 0 0 0 1000px rgba(255, 240, 248, 0.9) inset;
+  box-shadow: 0 0 0 1000px rgba(255, 240, 248, 0.9) inset;
+  caret-color: var(--plum);
+}
+
+.authx-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 6px;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.authx-forgot {
+  border: 0;
+  background: transparent;
+  color: var(--text-soft);
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color 150ms ease;
+}
+
+.authx-forgot:hover {
+  color: var(--pink-hot);
+}
+
+.authx-forgot:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.authx-consent {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-top: 4px;
+  padding: 12px 14px;
+  border: 1px solid rgba(255, 133, 179, 0.4);
+  border-radius: 12px;
+  background: rgba(255, 182, 193, 0.18);
+}
+
+.authx-consent-input {
+  margin-top: 2px;
+  accent-color: var(--pink);
+  width: 16px;
+  height: 16px;
+  flex: 0 0 auto;
+  cursor: pointer;
+}
+
+.authx-consent-text {
+  color: var(--plum);
+  font-family: var(--font-ui);
+  font-size: 0.78rem;
+  line-height: 1.55;
+}
+
+.authx-inline-link {
+  border: 0;
+  background: transparent;
+  padding: 0;
+  color: var(--plum-soft);
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 2px;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: color 150ms ease;
+}
+
+.authx-inline-link:hover {
+  color: var(--plum);
+}
+
+.authx-submit {
+  min-width: 168px;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--pink), var(--pink-hot));
+  color: var(--white);
+  border-color: rgba(255, 133, 179, 0.6);
+}
+
+.authx-submit:hover {
+  background: linear-gradient(135deg, var(--pink), var(--pink-hot));
+  filter: brightness(1.1);
+  border-color: var(--pink-hot);
+  color: var(--white);
+}
+
+.authx-error {
+  margin-top: 2px;
+  color: #be123c;
+  font-size: 0.74rem;
+  font-family: var(--font-ui);
+  font-weight: 600;
+}
+
+.authx-form-error {
+  margin-top: 4px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-ui);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: #be123c;
+  letter-spacing: 0.01em;
+  padding: 10px 14px;
+  border: 1px solid rgba(251, 113, 133, 0.5);
+  border-radius: 12px;
+  background: rgba(255, 228, 230, 0.6);
+}
+
+@keyframes authxFade {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 760px) {
+  .authx-card {
+    padding: 22px 18px 24px;
+  }
+
+  .authx-submit {
+    min-width: 100%;
+  }
+
+  .authx-row {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .authx-forgot {
+    text-align: center;
+  }
+}
+
+/* ── OPTIONAL FIELD HINT (display name / DOB) ────────────────────────── */
+.authx-label-opt {
+  font-weight: 400;
+  font-size: 0.68rem;
+  color: rgba(90, 26, 74, 0.45);
+  letter-spacing: 0.03em;
+  margin-left: 4px;
+  text-transform: lowercase;
+}
+
+/* Date input often renders with system chrome — normalize it to match other inputs */
+.authx-input-date::-webkit-calendar-picker-indicator {
+  opacity: 0.4;
+  cursor: pointer;
+}
+
+/* ── OAUTH DIVIDER + GOOGLE BUTTON ────────────────────────────────────── */
+.authx-divider {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 4px 0;
+}
+
+.authx-divider-line {
+  flex: 1;
+  height: 1px;
+  background: rgba(255, 133, 179, 0.3);
+}
+
+.authx-divider-text {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: rgba(90, 26, 74, 0.4);
+  letter-spacing: 0.08em;
+}
+
+.authx-oauth-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 10px 16px;
+  border: 1.5px solid rgba(255, 133, 179, 0.5);
+  border-radius: 999px;
+  background: rgba(255, 236, 246, 0.7);
+  color: #5a1a4a;
+  font-family: var(--font-ui, sans-serif);
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 160ms ease;
+}
+
+.authx-oauth-btn:hover:not(:disabled) {
+  border-color: #f472b6;
+  background: rgba(255, 204, 226, 1);
+}
+
+.authx-oauth-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.authx-oauth-icon {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+}

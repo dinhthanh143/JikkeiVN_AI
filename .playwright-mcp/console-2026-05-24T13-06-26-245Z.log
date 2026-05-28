@@ -1,0 +1,11 @@
+[     704ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=9ab438d9:14337
+[     763ms] [ERROR] Failed to load resource: the server responded with a status of 401 (Unauthorized) @ http://localhost:8001/auth/me:0
+[     800ms] [ERROR] Failed to load resource: the server responded with a status of 401 (Unauthorized) @ http://localhost:8001/auth/refresh:0
+[    8387ms] [LOG] [STORY_CHAT] User clicked Send @ http://localhost:5173/src/pages/StoryPage.tsx:550
+[    8387ms] [LOG] [STORY_CHAT] Chat input: write a short sentence describing today's weather in america @ http://localhost:5173/src/pages/StoryPage.tsx:551
+[    8388ms] [LOG] [STORY_CHAT] API_ORIGIN: http://localhost:8001 @ http://localhost:5173/src/pages/StoryPage.tsx:554
+[    8389ms] [LOG] [STORY_CHAT] Sending payload: {prompt: write a short sentence describing today's weather in america, tier: free} @ http://localhost:5173/src/pages/StoryPage.tsx:559
+[    9436ms] [LOG] [STORY_CHAT] Response status: 200 OK @ http://localhost:5173/src/pages/StoryPage.tsx:565
+[    9437ms] [LOG] [STORY_CHAT] Response OK? true @ http://localhost:5173/src/pages/StoryPage.tsx:566
+[    9439ms] [LOG] [STORY_CHAT] Response data: {text: Sorry, I can't answer that right now.} @ http://localhost:5173/src/pages/StoryPage.tsx:572
+[    9440ms] [LOG] [STORY_CHAT] Setting dialogue text: Sorry, I can't answer that right now. @ http://localhost:5173/src/pages/StoryPage.tsx:574

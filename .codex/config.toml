@@ -1,0 +1,11 @@
+# Project-scoped MCP configuration for Codex.
+# The server is installed globally by npm and is invoked by absolute path because
+# Codex may not inherit the interactive PowerShell npm PATH.
+
+[mcp_servers.codebase_memory_jikkei]
+command = 'C:\Users\ADMIN\AppData\Roaming\npm\codebase-memory-mcp.cmd'
+args = ['--project', 'D:/BotTest/JikkeiNovelAI']
+startup_timeout_sec = 120
+
+[mcp_servers.codebase_memory_jikkei.env]
+CBM_LOG_LEVEL = 'info'

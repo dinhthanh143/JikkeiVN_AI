@@ -1,0 +1,9 @@
+[     390ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=9ab438d9:14337
+[   38960ms] [ERROR] Access to fetch at 'http://localhost:8000/auth/legal/accept' from origin 'http://localhost:5173' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://localhost:5173/:0
+[   38963ms] [ERROR] Failed to load resource: net::ERR_FAILED @ http://localhost:8000/auth/legal/accept:0
+[   45711ms] [ERROR] Access to fetch at 'http://localhost:8000/auth/legal/accept' from origin 'http://localhost:5173' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://localhost:5173/:0
+[   45712ms] [ERROR] Failed to load resource: net::ERR_FAILED @ http://localhost:8000/auth/legal/accept:0
+[   46579ms] [ERROR] Access to fetch at 'http://localhost:8000/auth/legal/accept' from origin 'http://localhost:5173' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://localhost:5173/:0
+[   46579ms] [ERROR] Failed to load resource: net::ERR_FAILED @ http://localhost:8000/auth/legal/accept:0
+[   48478ms] [ERROR] Access to fetch at 'http://localhost:8000/auth/legal/accept' from origin 'http://localhost:5173' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://localhost:5173/:0
+[   48478ms] [ERROR] Failed to load resource: net::ERR_FAILED @ http://localhost:8000/auth/legal/accept:0

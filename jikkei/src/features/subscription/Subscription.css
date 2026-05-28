@@ -1,0 +1,332 @@
+/* ── features/subscription/Subscription.css ─────────────────────────────
+   Scoped styles for the Subscription tab only.
+   Imported exclusively by SubscriptionTab.tsx — no global bleed.
+   CSS vars reference the global design tokens from HomePage.css.
+──────────────────────────────────────────────────────────────────────── */
+
+/* ── Layout wrapper ── */
+.sub-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding-bottom: 32px;
+}
+
+/* ── Header block ── */
+.sub-header {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.sub-heading {
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--plum);
+  line-height: 1.1;
+}
+.sub-subheading {
+  font-family: var(--font-ui);
+  font-size: 0.88rem;
+  color: var(--text-soft);
+  line-height: 1.6;
+}
+.sub-current-tier-name {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  color: var(--plum);
+  text-transform: uppercase;
+}
+
+/* ── Credits status row (TASK-011) ── */
+.sub-credits-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  border-radius: 999px;
+  width: fit-content;
+  background: rgba(255, 211, 225, 0.4);
+  border: 1px solid rgba(255, 133, 179, 0.35);
+}
+.sub-credits-label {
+  font-family: var(--font-mono);
+  font-size: 0.66rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  color: var(--plum-soft);
+}
+.sub-credits-value {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  font-weight: 700;
+  color: var(--plum);
+}
+
+/* ── Plan card grid ── */
+.sub-plan-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  align-items: stretch;
+}
+
+/* ── Base plan card ── */
+.sub-plan-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  padding: 26px 24px 22px;
+  border-radius: 22px;
+  border: 2px solid rgba(255, 133, 179, 0.4);
+  background: linear-gradient(150deg, rgba(255,240,248,0.97) 0%, rgba(255,211,225,0.82) 100%);
+  box-shadow: 0 6px 22px rgba(244, 114, 182, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.7);
+  overflow: hidden;
+  transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+}
+.sub-plan-card::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, rgba(255,133,179,0.35), rgba(244,114,182,0.45), rgba(255,133,179,0.35));
+  border-radius: 22px 22px 0 0;
+}
+.sub-plan-card:hover {
+  border-color: rgba(244, 114, 182, 0.65);
+  transform: translateY(-4px);
+  box-shadow: 0 14px 36px rgba(244, 114, 182, 0.18), inset 0 1px 0 rgba(255, 255, 255, 0.75);
+}
+
+/* ── Premium card — gold-touched glass, glowing ring ── */
+.sub-plan-card--premium {
+  border-color: rgba(250, 191, 36, 0.55);
+  background: linear-gradient(
+    150deg,
+    rgba(255, 250, 237, 0.98) 0%,
+    rgba(255, 236, 195, 0.85) 45%,
+    rgba(255, 211, 225, 0.75) 100%
+  );
+  box-shadow:
+    0 8px 30px rgba(250, 191, 36, 0.14),
+    0 2px 8px rgba(244, 114, 182, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+.sub-plan-card--premium::before {
+  background: linear-gradient(90deg, #fbbf24, var(--pink-hot), #fbbf24);
+  height: 3px;
+}
+.sub-plan-card--premium:hover {
+  border-color: rgba(250, 191, 36, 0.85);
+  box-shadow:
+    0 18px 44px rgba(250, 191, 36, 0.22),
+    0 4px 14px rgba(244, 114, 182, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.85);
+}
+
+/* Current-plan card — subtle inner ring to signal active state */
+.sub-plan-card--current {
+  border-color: rgba(244, 114, 182, 0.7);
+  box-shadow:
+    0 6px 22px rgba(244, 114, 182, 0.15),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.5);
+}
+.sub-plan-card--premium.sub-plan-card--current {
+  border-color: rgba(250, 191, 36, 0.75);
+  box-shadow:
+    0 6px 22px rgba(250, 191, 36, 0.18),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.55);
+}
+
+/* ── Ribbon (BEST VALUE) ── */
+.sub-plan-ribbon {
+  position: absolute;
+  top: 16px; right: -24px;
+  width: 100px;
+  text-align: center;
+  transform: rotate(30deg);
+  background: linear-gradient(135deg, #fbbf24, #f59e0b);
+  color: #7a4a04;
+  font-family: var(--font-mono);
+  font-size: 0.52rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  padding: 4px 0;
+  box-shadow: 0 2px 8px rgba(245, 158, 11, 0.35);
+  pointer-events: none;
+}
+
+/* ── Plan name ── */
+.sub-plan-name {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  color: var(--plum-soft);
+}
+.sub-plan-card--premium .sub-plan-name {
+  background: linear-gradient(90deg, #b45309, var(--plum-soft));
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+
+/* ── Price ── */
+.sub-plan-price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+.sub-plan-price {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1;
+  color: var(--plum);
+}
+.sub-plan-card--premium .sub-plan-price {
+  background: linear-gradient(135deg, var(--pink-hot), #b45309);
+  -webkit-background-clip: text; background-clip: text; color: transparent;
+}
+.sub-plan-price-suffix {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--text-soft);
+  letter-spacing: 0.04em;
+}
+
+/* ── Tagline ── */
+.sub-plan-tagline {
+  font-family: var(--font-ui);
+  font-size: 0.82rem;
+  color: var(--text-soft);
+  line-height: 1.5;
+  padding-bottom: 4px;
+  border-bottom: 1px solid rgba(255, 133, 179, 0.18);
+}
+.sub-plan-card--premium .sub-plan-tagline {
+  border-bottom-color: rgba(251, 191, 36, 0.25);
+}
+
+/* ── Feature list ── */
+.sub-plan-features {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  flex: 1;
+}
+.sub-plan-feature {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-family: var(--font-ui);
+  font-size: 0.82rem;
+  color: var(--plum);
+  line-height: 1.45;
+}
+.sub-plan-feature-check {
+  flex-shrink: 0;
+  margin-top: 1px;
+  width: 16px; height: 16px;
+  border-radius: 50%;
+  background: rgba(244, 114, 182, 0.15);
+  border: 1px solid rgba(244, 114, 182, 0.35);
+  display: flex; align-items: center; justify-content: center;
+  font-size: 0.55rem;
+  color: var(--pink-hot);
+  font-weight: 700;
+  line-height: 1;
+}
+.sub-plan-card--premium .sub-plan-feature-check {
+  background: rgba(251, 191, 36, 0.15);
+  border-color: rgba(251, 191, 36, 0.45);
+  color: #b45309;
+}
+
+/* ── CTA button ── */
+.sub-plan-btn {
+  width: 100%;
+  margin-top: 6px;
+  padding: 12px 18px;
+  border-radius: 999px;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  cursor: pointer;
+  transition: all var(--transition);
+  border: 2px solid transparent;
+}
+
+/* Current plan — muted / inert */
+.sub-plan-btn--current {
+  background: rgba(255, 211, 225, 0.5);
+  color: var(--plum-soft);
+  border-color: rgba(255, 133, 179, 0.3);
+  cursor: default;
+  pointer-events: none;
+}
+
+/* Free plan CTA — ghost */
+.sub-plan-btn--ghost {
+  background: rgba(255, 255, 255, 0.5);
+  color: var(--plum-soft);
+  border-color: rgba(255, 133, 179, 0.4);
+}
+.sub-plan-btn--ghost:hover {
+  background: rgba(255, 255, 255, 0.8);
+  border-color: var(--pink);
+  color: var(--plum);
+  transform: translateY(-1px);
+}
+
+/* Premium CTA — full-bleed gradient with glow */
+.sub-plan-btn--premium {
+  background: linear-gradient(135deg, var(--pink), var(--pink-hot));
+  color: #fff;
+  border-color: rgba(255, 45, 120, 0.4);
+  box-shadow: 0 6px 18px rgba(255, 45, 120, 0.3), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+.sub-plan-btn--premium:hover:not(:disabled) {
+  filter: brightness(1.08);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 26px rgba(255, 45, 120, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+}
+.sub-plan-btn--premium:active:not(:disabled) {
+  transform: scale(0.98);
+}
+.sub-plan-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+/* ── Manage billing link ── */
+.sub-manage-link {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--font-ui);
+  font-size: 0.78rem;
+  color: var(--text-soft);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  text-decoration-color: rgba(255, 133, 179, 0.45);
+  padding: 0;
+  align-self: flex-start;
+  transition: color var(--transition), text-decoration-color var(--transition);
+}
+.sub-manage-link:hover {
+  color: var(--plum-soft);
+  text-decoration-color: var(--pink);
+}
+
+/* ── Responsive ── */
+@media (max-width: 640px) {
+  .sub-plan-grid { grid-template-columns: 1fr; }
+}

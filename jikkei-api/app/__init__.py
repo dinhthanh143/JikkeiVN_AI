@@ -1,0 +1,3 @@
+"""
+Jikkei API application package.
+"""

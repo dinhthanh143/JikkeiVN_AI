@@ -1,0 +1,76 @@
+# --- THE CORE WEB ENGINE ---
+# The web framework itself. Handles routing, requests, and automated documentation (Swagger).
+fastapi==0.115.0
+# The high-performance ASGI server. It sits under FastAPI to manage the actual web connections.
+uvicorn[standard]==0.30.6
+# Multi-worker production server process manager. Restarts crashed workers and scales across CPU cores.
+gunicorn==22.0.0
+
+# --- THE DATABASE LAYER (SQLAlchemy 2.0 + Drivers) ---
+# The Object-Relational Mapper (ORM). Lets you write Python classes that represent your DB tables.
+sqlalchemy>=2.0.44,<3
+# The high-speed asynchronous driver for PostgreSQL. Essential for FastAPI's "async" performance.
+asyncpg==0.29.0; python_version < "3.14"
+# A synchronous PostgreSQL driver with prebuilt wheels on modern Python versions.
+psycopg[binary]>=3.2.3,<4
+# The migration tool. Tracks changes to your SQLAlchemy models and applies those changes to your DB.
+alembic==1.13.3
+
+# --- SECURITY & AUTHENTICATION ---
+# Handles JSON Web Tokens (JWT). Used to create, sign, and verify the "tickets" users use to log in.
+python-jose[cryptography]==3.3.0
+# A password hashing utility. It ensures you never store raw "plain text" passwords in the database.
+passlib[bcrypt]==1.7.4
+# The underlying encryption engine used by Passlib to scramble passwords securely.
+bcrypt==4.0.1
+# Email validation library — ensures email addresses passed to schemas are valid format.
+email-validator==2.1.1
+# Error tracking SDK for FastAPI. Captures crashes without exposing internals to clients.
+sentry-sdk[fastapi]==2.8.0
+
+# --- CONFIGURATION & ENVIRONMENT ---
+# Handles the loading of your .env file into the system's environment variables.
+python-dotenv==1.0.1
+# A mastery-level tool to strictly validate that your secret keys and DB URLs exist and are correct.
+pydantic-settings==2.5.2
+
+# --- SECURITY: RATE LIMITING & ACCOUNT LOCKOUT ---
+# Rate limiter to prevent brute force attacks and abuse.
+slowapi==0.1.9
+# Dependency for slowapi — provides the underlying rate limit parsing and enforcement.
+limits==3.7.0
+# In-memory and distributed cache. Used by slowapi to store rate limit counters.
+redis==5.0.1
+# Structured logging helper with consistent formatting and safer exception logging.
+loguru==0.7.2
+# Security static analysis tool for catching common Python security mistakes.
+bandit==1.7.9
+# JSON formatter for logs sent to cloud log aggregators.
+python-json-logger==2.0.7
+
+# --- UTILITY & EXTERNAL COMMUNICATION ---
+# Required for handling file uploads (like profile pictures or marketplace item icons).
+python-multipart==0.0.12
+# An async HTTP client. Used if your backend needs to talk to other APIs.
+httpx==0.27.2
+# OpenAI Python SDK used for embeddings in lore retrieval.
+openai==1.35.0
+# Groq SDK — primary dialogue provider. Llama 3.3 70B on custom LPU hardware.
+# Uses the OpenAI-compatible SDK interface, so migration cost is near zero.
+groq==0.11.0
+# Cloudinary SDK for signed upload signatures and media management.
+cloudinary==1.41.0
+# PostgreSQL vector type integration for SQLAlchemy (pgvector).
+pgvector==0.3.2
+# Stripe SDK — billing (checkout, subscriptions, webhooks). Uses StripeClient
+# + _async methods (SDK v8+) since this backend is fully async.
+stripe==15.3.0
+
+# --- TESTING ---
+pytest==8.3.2
+pytest-asyncio==0.24.0
+aiosqlite==0.20.0
+
+# --- SCHEDULED TASKS ---
+# Lightweight job scheduler for background tasks like token cleanup (no external dependencies).
+apscheduler==3.10.4

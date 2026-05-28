@@ -1,0 +1,27 @@
+[     618ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=9ab438d9:14337
+[    1012ms] [ERROR] Failed to load resource: the server responded with a status of 401 (Unauthorized) @ http://localhost:8001/auth/me:0
+[    1033ms] [ERROR] Failed to load resource: the server responded with a status of 401 (Unauthorized) @ http://localhost:8001/auth/refresh:0
+[    8598ms] [LOG] [STORY_CHAT] User clicked Send @ http://localhost:5173/src/pages/StoryPage.tsx:550
+[    8599ms] [LOG] [STORY_CHAT] Chat input: write a short sentence describing today's weather in america @ http://localhost:5173/src/pages/StoryPage.tsx:551
+[    8599ms] [LOG] [STORY_CHAT] API_ORIGIN: http://localhost:8001 @ http://localhost:5173/src/pages/StoryPage.tsx:554
+[    8599ms] [LOG] [STORY_CHAT] Sending payload: {prompt: write a short sentence describing today's weather in america, tier: free} @ http://localhost:5173/src/pages/StoryPage.tsx:559
+[    9009ms] [LOG] [STORY_CHAT] Response status: 200 OK @ http://localhost:5173/src/pages/StoryPage.tsx:565
+[    9009ms] [LOG] [STORY_CHAT] Response OK? true @ http://localhost:5173/src/pages/StoryPage.tsx:566
+[    9010ms] [LOG] [STORY_CHAT] Response data: {text: Sorry, I can't answer that right now.} @ http://localhost:5173/src/pages/StoryPage.tsx:572
+[    9010ms] [LOG] [STORY_CHAT] Setting dialogue text: Sorry, I can't answer that right now. @ http://localhost:5173/src/pages/StoryPage.tsx:574
+[   97788ms] [LOG] [STORY_CHAT] User clicked Send @ http://localhost:5173/src/pages/StoryPage.tsx:550
+[   97790ms] [LOG] [STORY_CHAT] Chat input: write a short sentence describing today's weather in america @ http://localhost:5173/src/pages/StoryPage.tsx:551
+[   97791ms] [LOG] [STORY_CHAT] API_ORIGIN: http://localhost:8001 @ http://localhost:5173/src/pages/StoryPage.tsx:554
+[   97791ms] [LOG] [STORY_CHAT] Sending payload: {prompt: write a short sentence describing today's weather in america, tier: free} @ http://localhost:5173/src/pages/StoryPage.tsx:559
+[  100231ms] [LOG] [STORY_CHAT] Response status: 200 OK @ http://localhost:5173/src/pages/StoryPage.tsx:565
+[  100232ms] [LOG] [STORY_CHAT] Response OK? true @ http://localhost:5173/src/pages/StoryPage.tsx:566
+[  100233ms] [LOG] [STORY_CHAT] Response data: {text: Sorry, I can't answer that right now.} @ http://localhost:5173/src/pages/StoryPage.tsx:572
+[  100234ms] [LOG] [STORY_CHAT] Setting dialogue text: Sorry, I can't answer that right now. @ http://localhost:5173/src/pages/StoryPage.tsx:574
+[  208159ms] [LOG] [STORY_CHAT] User clicked Send @ http://localhost:5173/src/pages/StoryPage.tsx:550
+[  208160ms] [LOG] [STORY_CHAT] Chat input: write a short sentence describing today's weather in america @ http://localhost:5173/src/pages/StoryPage.tsx:551
+[  208161ms] [LOG] [STORY_CHAT] API_ORIGIN: http://localhost:8001 @ http://localhost:5173/src/pages/StoryPage.tsx:554
+[  208161ms] [LOG] [STORY_CHAT] Sending payload: {prompt: write a short sentence describing today's weather in america, tier: free} @ http://localhost:5173/src/pages/StoryPage.tsx:559
+[  214276ms] [LOG] [STORY_CHAT] Response status: 200 OK @ http://localhost:5173/src/pages/StoryPage.tsx:565
+[  214276ms] [LOG] [STORY_CHAT] Response OK? true @ http://localhost:5173/src/pages/StoryPage.tsx:566
+[  214280ms] [LOG] [STORY_CHAT] Response data: {text: Sorry, I can't answer that right now.} @ http://localhost:5173/src/pages/StoryPage.tsx:572
+[  214280ms] [LOG] [STORY_CHAT] Setting dialogue text: Sorry, I can't answer that right now. @ http://localhost:5173/src/pages/StoryPage.tsx:574

@@ -1,0 +1,966 @@
+- generic [ref=e3]:
+  - generic:
+    - img
+  - generic [ref=e4]:
+    - generic [ref=e8]:
+      - heading "Jikkei API 0.1.0 OAS 3.1" [level=1] [ref=e9]:
+        - text: Jikkei API
+        - generic [ref=e10]:
+          - generic [ref=e12]: 0.1.0
+          - generic [ref=e14]: OAS 3.1
+      - link "/openapi.json" [ref=e15] [cursor=pointer]:
+        - /url: /openapi.json
+        - generic [ref=e16]: /openapi.json
+    - generic [ref=e19]:
+      - generic [ref=e21]:
+        - heading "auth Collapse operation" [level=3] [ref=e22] [cursor=pointer]:
+          - link "auth" [ref=e23]:
+            - /url: "#/auth"
+          - button "Collapse operation" [expanded] [ref=e24]:
+            - img [ref=e25]
+        - generic [ref=e28]:
+          - generic [ref=e31] [cursor=pointer]:
+            - button "POST /auth/register Register" [ref=e32]:
+              - generic [ref=e33]: POST
+              - generic [ref=e34]:
+                - link "/auth/register" [ref=e36]:
+                  - /url: "#/auth/register_auth_register_post"
+                  - generic [ref=e37]:
+                    - text: /auth
+                    - text: /register
+                - generic [ref=e38]: Register
+            - generic "Copy to clipboard"
+            - button "post /auth/register" [ref=e41]:
+              - img [ref=e42]
+          - generic [ref=e46] [cursor=pointer]:
+            - button "POST /auth/login Login" [ref=e47]:
+              - generic [ref=e48]: POST
+              - generic [ref=e49]:
+                - link "/auth/login" [ref=e51]:
+                  - /url: "#/auth/login_auth_login_post"
+                  - generic [ref=e52]:
+                    - text: /auth
+                    - text: /login
+                - generic [ref=e53]: Login
+            - generic "Copy to clipboard"
+            - button "post /auth/login" [ref=e56]:
+              - img [ref=e57]
+          - generic [ref=e61] [cursor=pointer]:
+            - button "POST /auth/refresh Refresh" [ref=e62]:
+              - generic [ref=e63]: POST
+              - generic [ref=e64]:
+                - link "/auth/refresh" [ref=e66]:
+                  - /url: "#/auth/refresh_auth_refresh_post"
+                  - generic [ref=e67]:
+                    - text: /auth
+                    - text: /refresh
+                - generic [ref=e68]: Refresh
+            - generic "Copy to clipboard"
+            - button "post /auth/refresh" [ref=e71]:
+              - img [ref=e72]
+          - generic [ref=e76] [cursor=pointer]:
+            - button "POST /auth/logout Logout" [ref=e77]:
+              - generic [ref=e78]: POST
+              - generic [ref=e79]:
+                - link "/auth/logout" [ref=e81]:
+                  - /url: "#/auth/logout_auth_logout_post"
+                  - generic [ref=e82]:
+                    - text: /auth
+                    - text: /logout
+                - generic [ref=e83]: Logout
+            - generic "Copy to clipboard"
+            - button "post /auth/logout" [ref=e86]:
+              - img [ref=e87]
+          - generic [ref=e91] [cursor=pointer]:
+            - button "POST /auth/logout-all Logout All" [ref=e92]:
+              - generic [ref=e93]: POST
+              - generic [ref=e94]:
+                - link "/auth/logout-all" [ref=e96]:
+                  - /url: "#/auth/logout_all_auth_logout_all_post"
+                  - generic [ref=e97]:
+                    - text: /auth
+                    - text: /logout-all
+                - generic [ref=e98]: Logout All
+            - generic "Copy to clipboard"
+            - button "post /auth/logout-all" [ref=e101]:
+              - img [ref=e102]
+          - generic [ref=e106] [cursor=pointer]:
+            - button "GET /auth/me Me" [ref=e107]:
+              - generic [ref=e108]: GET
+              - generic [ref=e109]:
+                - link "/auth/me" [ref=e111]:
+                  - /url: "#/auth/me_auth_me_get"
+                  - generic [ref=e112]:
+                    - text: /auth
+                    - text: /me
+                - generic [ref=e113]: Me
+            - generic "Copy to clipboard"
+            - button "get /auth/me" [ref=e116]:
+              - img [ref=e117]
+          - generic [ref=e121] [cursor=pointer]:
+            - button "GET /auth/legal/status Legal Status" [ref=e122]:
+              - generic [ref=e123]: GET
+              - generic [ref=e124]:
+                - link "/auth/legal/status" [ref=e126]:
+                  - /url: "#/auth/legal_status_auth_legal_status_get"
+                  - generic [ref=e127]:
+                    - text: /auth
+                    - text: /legal
+                    - text: /status
+                - generic [ref=e128]: Legal Status
+            - generic "Copy to clipboard"
+            - button "get /auth/legal/status" [ref=e131]:
+              - img [ref=e132]
+          - generic [ref=e136] [cursor=pointer]:
+            - button "POST /auth/legal/accept Accept Legal Terms" [ref=e137]:
+              - generic [ref=e138]: POST
+              - generic [ref=e139]:
+                - link "/auth/legal/accept" [ref=e141]:
+                  - /url: "#/auth/accept_legal_terms_auth_legal_accept_post"
+                  - generic [ref=e142]:
+                    - text: /auth
+                    - text: /legal
+                    - text: /accept
+                - generic [ref=e143]: Accept Legal Terms
+            - generic "Copy to clipboard"
+            - button "post /auth/legal/accept" [ref=e146]:
+              - img [ref=e147]
+          - generic [ref=e151] [cursor=pointer]:
+            - button "GET /auth/sessions List Sessions" [ref=e152]:
+              - generic [ref=e153]: GET
+              - generic [ref=e154]:
+                - link "/auth/sessions" [ref=e156]:
+                  - /url: "#/auth/list_sessions_auth_sessions_get"
+                  - generic [ref=e157]:
+                    - text: /auth
+                    - text: /sessions
+                - generic [ref=e158]: List Sessions
+            - generic "Copy to clipboard"
+            - button "get /auth/sessions" [ref=e161]:
+              - img [ref=e162]
+      - generic [ref=e165]:
+        - heading "admin Collapse operation" [level=3] [ref=e166] [cursor=pointer]:
+          - link "admin" [ref=e167]:
+            - /url: "#/admin"
+          - button "Collapse operation" [expanded] [ref=e168]:
+            - img [ref=e169]
+        - generic [ref=e172]:
+          - generic [ref=e175] [cursor=pointer]:
+            - button "GET /admin/users List Users" [ref=e176]:
+              - generic [ref=e177]: GET
+              - generic [ref=e178]:
+                - link "/admin/users" [ref=e180]:
+                  - /url: "#/admin/list_users_admin_users_get"
+                  - generic [ref=e181]:
+                    - text: /admin
+                    - text: /users
+                - generic [ref=e182]: List Users
+            - generic "Copy to clipboard"
+            - button "get /admin/users" [ref=e185]:
+              - img [ref=e186]
+          - generic [ref=e190] [cursor=pointer]:
+            - 'button "GET /admin/users/{user_id} Get User" [ref=e191]':
+              - generic [ref=e192]: GET
+              - generic [ref=e193]:
+                - 'link "/admin/users/{user_id}" [ref=e195]':
+                  - /url: "#/admin/get_user_admin_users__user_id__get"
+                  - generic [ref=e196]:
+                    - text: /admin
+                    - text: /users
+                    - text: "/{user_id}"
+                - generic [ref=e197]: Get User
+            - generic "Copy to clipboard"
+            - 'button "get /admin/users/{user_id}" [ref=e200]':
+              - img [ref=e201]
+          - generic [ref=e205] [cursor=pointer]:
+            - 'button "DELETE /admin/users/{user_id} Soft Delete User" [ref=e206]':
+              - generic [ref=e207]: DELETE
+              - generic [ref=e208]:
+                - 'link "/admin/users/{user_id}" [ref=e210]':
+                  - /url: "#/admin/soft_delete_user_admin_users__user_id__delete"
+                  - generic [ref=e211]:
+                    - text: /admin
+                    - text: /users
+                    - text: "/{user_id}"
+                - generic [ref=e212]: Soft Delete User
+            - generic "Copy to clipboard"
+            - 'button "delete /admin/users/{user_id}" [ref=e215]':
+              - img [ref=e216]
+          - generic [ref=e220] [cursor=pointer]:
+            - 'button "PATCH /admin/users/{user_id}/role Update User Role" [ref=e221]':
+              - generic [ref=e222]: PATCH
+              - generic [ref=e223]:
+                - 'link "/admin/users/{user_id}/role" [ref=e225]':
+                  - /url: "#/admin/update_user_role_admin_users__user_id__role_patch"
+                  - generic [ref=e226]:
+                    - text: /admin
+                    - text: /users
+                    - text: "/{user_id}"
+                    - text: /role
+                - generic [ref=e227]: Update User Role
+            - generic "Copy to clipboard"
+            - 'button "patch /admin/users/{user_id}/role" [ref=e230]':
+              - img [ref=e231]
+          - generic [ref=e235] [cursor=pointer]:
+            - button "GET /admin/stats Get Admin Stats" [ref=e236]:
+              - generic [ref=e237]: GET
+              - generic [ref=e238]:
+                - link "/admin/stats" [ref=e240]:
+                  - /url: "#/admin/get_admin_stats_admin_stats_get"
+                  - generic [ref=e241]:
+                    - text: /admin
+                    - text: /stats
+                - generic [ref=e242]: Get Admin Stats
+            - generic "Copy to clipboard"
+            - button "get /admin/stats" [ref=e245]:
+              - img [ref=e246]
+          - generic [ref=e250] [cursor=pointer]:
+            - button "POST /admin/maintenance/cleanup-tokens Trigger Token Cleanup" [ref=e251]:
+              - generic [ref=e252]: POST
+              - generic [ref=e253]:
+                - link "/admin/maintenance/cleanup-tokens" [ref=e255]:
+                  - /url: "#/admin/trigger_token_cleanup_admin_maintenance_cleanup_tokens_post"
+                  - generic [ref=e256]:
+                    - text: /admin
+                    - text: /maintenance
+                    - text: /cleanup-tokens
+                - generic [ref=e257]: Trigger Token Cleanup
+            - generic "Copy to clipboard"
+            - button "post /admin/maintenance/cleanup-tokens" [ref=e260]:
+              - img [ref=e261]
+      - generic [ref=e264]:
+        - heading "upload Collapse operation" [level=3] [ref=e265] [cursor=pointer]:
+          - link "upload" [ref=e266]:
+            - /url: "#/upload"
+          - button "Collapse operation" [expanded] [ref=e267]:
+            - img [ref=e268]
+        - generic [ref=e271]:
+          - generic [ref=e274] [cursor=pointer]:
+            - button "POST /api/upload/signature Get Upload Signature" [ref=e275]:
+              - generic [ref=e276]: POST
+              - generic [ref=e277]:
+                - link "/api/upload/signature" [ref=e279]:
+                  - /url: "#/upload/get_upload_signature_api_upload_signature_post"
+                  - generic [ref=e280]:
+                    - text: /api
+                    - text: /upload
+                    - text: /signature
+                - generic [ref=e281]: Get Upload Signature
+            - generic "Copy to clipboard"
+            - button "post /api/upload/signature" [ref=e284]:
+              - img [ref=e285]
+          - generic [ref=e289] [cursor=pointer]:
+            - button "POST /api/upload Upload Image" [ref=e290]:
+              - generic [ref=e291]: POST
+              - generic [ref=e292]:
+                - link "/api/upload" [ref=e294]:
+                  - /url: "#/upload/upload_image_api_upload_post"
+                  - generic [ref=e295]:
+                    - text: /api
+                    - text: /upload
+                - generic [ref=e296]: Upload Image
+            - generic "Copy to clipboard"
+            - button "post /api/upload" [ref=e299]:
+              - img [ref=e300]
+      - generic [ref=e303]:
+        - heading "scenes Collapse operation" [level=3] [ref=e304] [cursor=pointer]:
+          - link "scenes" [ref=e305]:
+            - /url: "#/scenes"
+          - button "Collapse operation" [expanded] [ref=e306]:
+            - img [ref=e307]
+        - generic [ref=e310]:
+          - generic [ref=e313] [cursor=pointer]:
+            - button "GET /api/scenes List Scenes" [ref=e314]:
+              - generic [ref=e315]: GET
+              - generic [ref=e316]:
+                - link "/api/scenes" [ref=e318]:
+                  - /url: "#/scenes/list_scenes_api_scenes_get"
+                  - generic [ref=e319]:
+                    - text: /api
+                    - text: /scenes
+                - generic [ref=e320]: List Scenes
+            - generic "Copy to clipboard"
+            - button "get /api/scenes" [ref=e323]:
+              - img [ref=e324]
+          - generic [ref=e328] [cursor=pointer]:
+            - button "POST /api/scenes Create Scene" [ref=e329]:
+              - generic [ref=e330]: POST
+              - generic [ref=e331]:
+                - link "/api/scenes" [ref=e333]:
+                  - /url: "#/scenes/create_scene_api_scenes_post"
+                  - generic [ref=e334]:
+                    - text: /api
+                    - text: /scenes
+                - generic [ref=e335]: Create Scene
+            - generic "Copy to clipboard"
+            - button "post /api/scenes" [ref=e338]:
+              - img [ref=e339]
+          - generic [ref=e343] [cursor=pointer]:
+            - 'button "GET /api/scenes/{scene_id} Get Scene" [ref=e344]':
+              - generic [ref=e345]: GET
+              - generic [ref=e346]:
+                - 'link "/api/scenes/{scene_id}" [ref=e348]':
+                  - /url: "#/scenes/get_scene_api_scenes__scene_id__get"
+                  - generic [ref=e349]:
+                    - text: /api
+                    - text: /scenes
+                    - text: "/{scene_id}"
+                - generic [ref=e350]: Get Scene
+            - generic "Copy to clipboard"
+            - 'button "get /api/scenes/{scene_id}" [ref=e353]':
+              - img [ref=e354]
+          - generic [ref=e358] [cursor=pointer]:
+            - 'button "PUT /api/scenes/{scene_id} Update Scene" [ref=e359]':
+              - generic [ref=e360]: PUT
+              - generic [ref=e361]:
+                - 'link "/api/scenes/{scene_id}" [ref=e363]':
+                  - /url: "#/scenes/update_scene_api_scenes__scene_id__put"
+                  - generic [ref=e364]:
+                    - text: /api
+                    - text: /scenes
+                    - text: "/{scene_id}"
+                - generic [ref=e365]: Update Scene
+            - generic "Copy to clipboard"
+            - 'button "put /api/scenes/{scene_id}" [ref=e368]':
+              - img [ref=e369]
+          - generic [ref=e373] [cursor=pointer]:
+            - 'button "DELETE /api/scenes/{scene_id} Delete Scene" [ref=e374]':
+              - generic [ref=e375]: DELETE
+              - generic [ref=e376]:
+                - 'link "/api/scenes/{scene_id}" [ref=e378]':
+                  - /url: "#/scenes/delete_scene_api_scenes__scene_id__delete"
+                  - generic [ref=e379]:
+                    - text: /api
+                    - text: /scenes
+                    - text: "/{scene_id}"
+                - generic [ref=e380]: Delete Scene
+            - generic "Copy to clipboard"
+            - 'button "delete /api/scenes/{scene_id}" [ref=e383]':
+              - img [ref=e384]
+          - generic [ref=e388] [cursor=pointer]:
+            - 'button "POST /api/scenes/{scene_id}/characters Create Character" [ref=e389]':
+              - generic [ref=e390]: POST
+              - generic [ref=e391]:
+                - 'link "/api/scenes/{scene_id}/characters" [ref=e393]':
+                  - /url: "#/scenes/create_character_api_scenes__scene_id__characters_post"
+                  - generic [ref=e394]:
+                    - text: /api
+                    - text: /scenes
+                    - text: "/{scene_id}"
+                    - text: /characters
+                - generic [ref=e395]: Create Character
+            - generic "Copy to clipboard"
+            - 'button "post /api/scenes/{scene_id}/characters" [ref=e398]':
+              - img [ref=e399]
+          - generic [ref=e403] [cursor=pointer]:
+            - 'button "PUT /api/scenes/{scene_id}/characters/{character_id} Update Character" [ref=e404]':
+              - generic [ref=e405]: PUT
+              - generic [ref=e406]:
+                - 'link "/api/scenes/{scene_id}/characters/{character_id}" [ref=e408]':
+                  - /url: "#/scenes/update_character_api_scenes__scene_id__characters__character_id__put"
+                  - generic [ref=e409]:
+                    - text: /api
+                    - text: /scenes
+                    - text: "/{scene_id}"
+                    - text: /characters
+                    - text: "/{character_id}"
+                - generic [ref=e410]: Update Character
+            - generic "Copy to clipboard"
+            - 'button "put /api/scenes/{scene_id}/characters/{character_id}" [ref=e413]':
+              - img [ref=e414]
+          - generic [ref=e418] [cursor=pointer]:
+            - 'button "PUT /api/scenes/{scene_id}/characters/{character_id}/expressions Replace Character Expressions" [ref=e419]':
+              - generic [ref=e420]: PUT
+              - generic [ref=e421]:
+                - 'link "/api/scenes/{scene_id}/characters/{character_id}/expressions" [ref=e423]':
+                  - /url: "#/scenes/replace_character_expressions_api_scenes__scene_id__characters__character_id__expressions_put"
+                  - generic [ref=e424]:
+                    - text: /api
+                    - text: /scenes
+                    - text: "/{scene_id}"
+                    - text: /characters
+                    - text: "/{character_id}"
+                    - text: /expressions
+                - generic [ref=e425]: Replace Character Expressions
+            - generic "Copy to clipboard"
+            - 'button "put /api/scenes/{scene_id}/characters/{character_id}/expressions" [ref=e428]':
+              - img [ref=e429]
+          - generic [ref=e433] [cursor=pointer]:
+            - 'button "PUT /api/scenes/{scene_id}/characters/{character_id}/attributes Update Character Attributes" [ref=e434]':
+              - generic [ref=e435]: PUT
+              - generic [ref=e436]:
+                - 'link "/api/scenes/{scene_id}/characters/{character_id}/attributes" [ref=e438]':
+                  - /url: "#/scenes/update_character_attributes_api_scenes__scene_id__characters__character_id__attributes_put"
+                  - generic [ref=e439]:
+                    - text: /api
+                    - text: /scenes
+                    - text: "/{scene_id}"
+                    - text: /characters
+                    - text: "/{character_id}"
+                    - text: /attributes
+                - generic [ref=e440]: Update Character Attributes
+            - generic "Copy to clipboard"
+            - 'button "put /api/scenes/{scene_id}/characters/{character_id}/attributes" [ref=e443]':
+              - img [ref=e444]
+          - generic [ref=e448] [cursor=pointer]:
+            - 'button "PUT /api/scenes/{scene_id}/characters/{character_id}/rules Replace Character Rules" [ref=e449]':
+              - generic [ref=e450]: PUT
+              - generic [ref=e451]:
+                - 'link "/api/scenes/{scene_id}/characters/{character_id}/rules" [ref=e453]':
+                  - /url: "#/scenes/replace_character_rules_api_scenes__scene_id__characters__character_id__rules_put"
+                  - generic [ref=e454]:
+                    - text: /api
+                    - text: /scenes
+                    - text: "/{scene_id}"
+                    - text: /characters
+                    - text: "/{character_id}"
+                    - text: /rules
+                - generic [ref=e455]: Replace Character Rules
+            - generic "Copy to clipboard"
+            - 'button "put /api/scenes/{scene_id}/characters/{character_id}/rules" [ref=e458]':
+              - img [ref=e459]
+          - generic [ref=e463] [cursor=pointer]:
+            - 'button "POST /api/scenes/{scene_id}/characters/{character_id}/triggers Create Character Trigger" [ref=e464]':
+              - generic [ref=e465]: POST
+              - generic [ref=e466]:
+                - 'link "/api/scenes/{scene_id}/characters/{character_id}/triggers" [ref=e468]':
+                  - /url: "#/scenes/create_character_trigger_api_scenes__scene_id__characters__character_id__triggers_post"
+                  - generic [ref=e469]:
+                    - text: /api
+                    - text: /scenes
+                    - text: "/{scene_id}"
+                    - text: /characters
+                    - text: "/{character_id}"
+                    - text: /triggers
+                - generic [ref=e470]: Create Character Trigger
+            - generic "Copy to clipboard"
+            - 'button "post /api/scenes/{scene_id}/characters/{character_id}/triggers" [ref=e473]':
+              - img [ref=e474]
+          - generic [ref=e478] [cursor=pointer]:
+            - 'button "DELETE /api/scenes/{scene_id}/characters/{character_id}/triggers/{trigger_id} Delete Character Trigger" [ref=e479]':
+              - generic [ref=e480]: DELETE
+              - generic [ref=e481]:
+                - 'link "/api/scenes/{scene_id}/characters/{character_id}/triggers/{trigger_id}" [ref=e483]':
+                  - /url: "#/scenes/delete_character_trigger_api_scenes__scene_id__characters__character_id__triggers__trigger_id__delete"
+                  - generic [ref=e484]:
+                    - text: /api
+                    - text: /scenes
+                    - text: "/{scene_id}"
+                    - text: /characters
+                    - text: "/{character_id}"
+                    - text: /triggers
+                    - text: "/{trigger_id}"
+                - generic [ref=e485]: Delete Character Trigger
+            - generic "Copy to clipboard"
+            - 'button "delete /api/scenes/{scene_id}/characters/{character_id}/triggers/{trigger_id}" [ref=e488]':
+              - img [ref=e489]
+          - generic [ref=e493] [cursor=pointer]:
+            - 'button "POST /api/scenes/{scene_id}/backgrounds Create Background" [ref=e494]':
+              - generic [ref=e495]: POST
+              - generic [ref=e496]:
+                - 'link "/api/scenes/{scene_id}/backgrounds" [ref=e498]':
+                  - /url: "#/scenes/create_background_api_scenes__scene_id__backgrounds_post"
+                  - generic [ref=e499]:
+                    - text: /api
+                    - text: /scenes
+                    - text: "/{scene_id}"
+                    - text: /backgrounds
+                - generic [ref=e500]: Create Background
+            - generic "Copy to clipboard"
+            - 'button "post /api/scenes/{scene_id}/backgrounds" [ref=e503]':
+              - img [ref=e504]
+          - generic [ref=e508] [cursor=pointer]:
+            - 'button "PUT /api/scenes/{scene_id}/backgrounds/{background_id} Update Background" [ref=e509]':
+              - generic [ref=e510]: PUT
+              - generic [ref=e511]:
+                - 'link "/api/scenes/{scene_id}/backgrounds/{background_id}" [ref=e513]':
+                  - /url: "#/scenes/update_background_api_scenes__scene_id__backgrounds__background_id__put"
+                  - generic [ref=e514]:
+                    - text: /api
+                    - text: /scenes
+                    - text: "/{scene_id}"
+                    - text: /backgrounds
+                    - text: "/{background_id}"
+                - generic [ref=e515]: Update Background
+            - generic "Copy to clipboard"
+            - 'button "put /api/scenes/{scene_id}/backgrounds/{background_id}" [ref=e518]':
+              - img [ref=e519]
+          - generic [ref=e523] [cursor=pointer]:
+            - 'button "DELETE /api/scenes/{scene_id}/backgrounds/{background_id} Delete Background" [ref=e524]':
+              - generic [ref=e525]: DELETE
+              - generic [ref=e526]:
+                - 'link "/api/scenes/{scene_id}/backgrounds/{background_id}" [ref=e528]':
+                  - /url: "#/scenes/delete_background_api_scenes__scene_id__backgrounds__background_id__delete"
+                  - generic [ref=e529]:
+                    - text: /api
+                    - text: /scenes
+                    - text: "/{scene_id}"
+                    - text: /backgrounds
+                    - text: "/{background_id}"
+                - generic [ref=e530]: Delete Background
+            - generic "Copy to clipboard"
+            - 'button "delete /api/scenes/{scene_id}/backgrounds/{background_id}" [ref=e533]':
+              - img [ref=e534]
+          - generic [ref=e538] [cursor=pointer]:
+            - 'button "PUT /api/scenes/{scene_id}/starting-background Set Starting Background" [ref=e539]':
+              - generic [ref=e540]: PUT
+              - generic [ref=e541]:
+                - 'link "/api/scenes/{scene_id}/starting-background" [ref=e543]':
+                  - /url: "#/scenes/set_starting_background_api_scenes__scene_id__starting_background_put"
+                  - generic [ref=e544]:
+                    - text: /api
+                    - text: /scenes
+                    - text: "/{scene_id}"
+                    - text: /starting-background
+                - generic [ref=e545]: Set Starting Background
+            - generic "Copy to clipboard"
+            - 'button "put /api/scenes/{scene_id}/starting-background" [ref=e548]':
+              - img [ref=e549]
+          - generic [ref=e553] [cursor=pointer]:
+            - button "POST /api/sessions/start Start Session" [ref=e554]:
+              - generic [ref=e555]: POST
+              - generic [ref=e556]:
+                - link "/api/sessions/start" [ref=e558]:
+                  - /url: "#/scenes/start_session_api_sessions_start_post"
+                  - generic [ref=e559]:
+                    - text: /api
+                    - text: /sessions
+                    - text: /start
+                - generic [ref=e560]: Start Session
+            - generic "Copy to clipboard"
+            - button "post /api/sessions/start" [ref=e563]:
+              - img [ref=e564]
+          - generic [ref=e568] [cursor=pointer]:
+            - button "POST /api/sessions/turn Process Turn" [ref=e569]:
+              - generic [ref=e570]: POST
+              - generic [ref=e571]:
+                - link "/api/sessions/turn" [ref=e573]:
+                  - /url: "#/scenes/process_turn_api_sessions_turn_post"
+                  - generic [ref=e574]:
+                    - text: /api
+                    - text: /sessions
+                    - text: /turn
+                - generic [ref=e575]: Process Turn
+            - generic "Copy to clipboard"
+            - button "post /api/sessions/turn" [ref=e578]:
+              - img [ref=e579]
+          - generic [ref=e583] [cursor=pointer]:
+            - 'button "POST /api/sessions/{id}/redo Redo Turn" [ref=e584]':
+              - generic [ref=e585]: POST
+              - generic [ref=e586]:
+                - 'link "/api/sessions/{id}/redo" [ref=e588]':
+                  - /url: "#/scenes/redo_turn_api_sessions__id__redo_post"
+                  - generic [ref=e589]:
+                    - text: /api
+                    - text: /sessions
+                    - text: "/{id}"
+                    - text: /redo
+                - generic [ref=e590]: Redo Turn
+            - generic "Copy to clipboard"
+            - 'button "post /api/sessions/{id}/redo" [ref=e593]':
+              - img [ref=e594]
+          - generic [ref=e598] [cursor=pointer]:
+            - 'button "POST /api/sessions/{id}/context-change Apply Context Change" [ref=e599]':
+              - generic [ref=e600]: POST
+              - generic [ref=e601]:
+                - 'link "/api/sessions/{id}/context-change" [ref=e603]':
+                  - /url: "#/scenes/apply_context_change_api_sessions__id__context_change_post"
+                  - generic [ref=e604]:
+                    - text: /api
+                    - text: /sessions
+                    - text: "/{id}"
+                    - text: /context-change
+                - generic [ref=e605]: Apply Context Change
+            - generic "Copy to clipboard"
+            - 'button "post /api/sessions/{id}/context-change" [ref=e608]':
+              - img [ref=e609]
+          - generic [ref=e613] [cursor=pointer]:
+            - 'button "GET /api/sessions/{id} Get Session State" [ref=e614]':
+              - generic [ref=e615]: GET
+              - generic [ref=e616]:
+                - 'link "/api/sessions/{id}" [ref=e618]':
+                  - /url: "#/scenes/get_session_state_api_sessions__id__get"
+                  - generic [ref=e619]:
+                    - text: /api
+                    - text: /sessions
+                    - text: "/{id}"
+                - generic [ref=e620]: Get Session State
+            - generic "Copy to clipboard"
+            - 'button "get /api/sessions/{id}" [ref=e623]':
+              - img [ref=e624]
+          - generic [ref=e628] [cursor=pointer]:
+            - 'button "POST /api/sessions/{id}/end End Session" [ref=e629]':
+              - generic [ref=e630]: POST
+              - generic [ref=e631]:
+                - 'link "/api/sessions/{id}/end" [ref=e633]':
+                  - /url: "#/scenes/end_session_api_sessions__id__end_post"
+                  - generic [ref=e634]:
+                    - text: /api
+                    - text: /sessions
+                    - text: "/{id}"
+                    - text: /end
+                - generic [ref=e635]: End Session
+            - generic "Copy to clipboard"
+            - 'button "post /api/sessions/{id}/end" [ref=e638]':
+              - img [ref=e639]
+      - generic [ref=e642]:
+        - heading "credits Collapse operation" [level=3] [ref=e643] [cursor=pointer]:
+          - link "credits" [ref=e644]:
+            - /url: "#/credits"
+          - button "Collapse operation" [expanded] [ref=e645]:
+            - img [ref=e646]
+        - generic [ref=e652] [cursor=pointer]:
+          - button "GET /api/credits Get Credits" [ref=e653]:
+            - generic [ref=e654]: GET
+            - generic [ref=e655]:
+              - link "/api/credits" [ref=e657]:
+                - /url: "#/credits/get_credits_api_credits_get"
+                - generic [ref=e658]:
+                  - text: /api
+                  - text: /credits
+              - generic [ref=e659]: Get Credits
+          - generic "Copy to clipboard"
+          - button "get /api/credits" [ref=e662]:
+            - img [ref=e663]
+      - generic [ref=e666]:
+        - heading "ai Collapse operation" [level=3] [ref=e667] [cursor=pointer]:
+          - link "ai" [ref=e668]:
+            - /url: "#/ai"
+          - button "Collapse operation" [expanded] [ref=e669]:
+            - img [ref=e670]
+        - generic [ref=e673]:
+          - generic [ref=e676] [cursor=pointer]:
+            - button "POST /api/ai/chat Chat Endpoint" [ref=e677]:
+              - generic [ref=e678]: POST
+              - generic [ref=e679]:
+                - link "/api/ai/chat" [ref=e681]:
+                  - /url: "#/ai/chat_endpoint_api_ai_chat_post"
+                  - generic [ref=e682]:
+                    - text: /api
+                    - text: /ai
+                    - text: /chat
+                - generic [ref=e683]: Chat Endpoint
+            - generic "Copy to clipboard"
+            - button "post /api/ai/chat" [ref=e686]:
+              - img [ref=e687]
+          - generic [ref=e691] [cursor=pointer]:
+            - button "POST /api/ai/chat/stream Chat Stream Endpoint" [ref=e692]:
+              - generic [ref=e693]: POST
+              - generic [ref=e694]:
+                - link "/api/ai/chat/stream" [ref=e696]:
+                  - /url: "#/ai/chat_stream_endpoint_api_ai_chat_stream_post"
+                  - generic [ref=e697]:
+                    - text: /api
+                    - text: /ai
+                    - text: /chat
+                    - text: /stream
+                - generic [ref=e698]: Chat Stream Endpoint
+            - generic "Copy to clipboard"
+            - button "post /api/ai/chat/stream" [ref=e701]:
+              - img [ref=e702]
+      - generic [ref=e705]:
+        - heading "default Collapse operation" [level=3] [ref=e706] [cursor=pointer]:
+          - link "default" [ref=e707]:
+            - /url: "#/default"
+          - button "Collapse operation" [expanded] [ref=e708]:
+            - img [ref=e709]
+        - generic [ref=e712]:
+          - generic [ref=e715] [cursor=pointer]:
+            - button "GET / Root" [ref=e716]:
+              - generic [ref=e717]: GET
+              - generic [ref=e718]:
+                - link / [ref=e720]:
+                  - /url: "#/default/root__get"
+                - generic [ref=e721]: Root
+            - generic "Copy to clipboard"
+            - button "get /" [ref=e724]:
+              - img [ref=e725]
+          - generic [ref=e729] [cursor=pointer]:
+            - button "GET /health Health" [ref=e730]:
+              - generic [ref=e731]: GET
+              - generic [ref=e732]:
+                - link "/health" [ref=e734]:
+                  - /url: "#/default/health_health_get"
+                - generic [ref=e735]: Health
+            - generic "Copy to clipboard"
+            - button "get /health" [ref=e738]:
+              - img [ref=e739]
+    - generic [ref=e743]:
+      - heading "Schemas" [level=4] [ref=e744] [cursor=pointer]:
+        - button "Schemas" [expanded] [ref=e745]:
+          - generic [ref=e746]: Schemas
+          - img [ref=e747]
+      - generic [ref=e749]:
+        - article [ref=e750]:
+          - generic [ref=e751]:
+            - button "AdminUsersListResponse" [ref=e752] [cursor=pointer]:
+              - generic [ref=e754]: AdminUsersListResponse
+              - img [ref=e756]
+            - button "Expand all" [ref=e758] [cursor=pointer]
+            - strong [ref=e759]: object
+        - article [ref=e760]:
+          - generic [ref=e761]:
+            - button "AttributeResponse" [ref=e762] [cursor=pointer]:
+              - generic [ref=e764]: AttributeResponse
+              - img [ref=e766]
+            - button "Expand all" [ref=e768] [cursor=pointer]
+            - strong [ref=e769]: object
+        - article [ref=e770]:
+          - generic [ref=e771]:
+            - button "AttributeUpdateItem" [ref=e772] [cursor=pointer]:
+              - generic [ref=e774]: AttributeUpdateItem
+              - img [ref=e776]
+            - button "Expand all" [ref=e778] [cursor=pointer]
+            - strong [ref=e779]: object
+        - article [ref=e780]:
+          - generic [ref=e781]:
+            - button "AttributeUpdateRequest" [ref=e782] [cursor=pointer]:
+              - generic [ref=e784]: AttributeUpdateRequest
+              - img [ref=e786]
+            - button "Expand all" [ref=e788] [cursor=pointer]
+            - strong [ref=e789]: object
+        - article [ref=e790]:
+          - generic [ref=e791]:
+            - button "BackgroundCreateRequest" [ref=e792] [cursor=pointer]:
+              - generic [ref=e794]: BackgroundCreateRequest
+              - img [ref=e796]
+            - button "Expand all" [ref=e798] [cursor=pointer]
+            - strong [ref=e799]: object
+        - article [ref=e800]:
+          - generic [ref=e801]:
+            - button "BackgroundResponse" [ref=e802] [cursor=pointer]:
+              - generic [ref=e804]: BackgroundResponse
+              - img [ref=e806]
+            - button "Expand all" [ref=e808] [cursor=pointer]
+            - strong [ref=e809]: object
+        - article [ref=e810]:
+          - generic [ref=e811]:
+            - button "Body_upload_image_api_upload_post" [ref=e812] [cursor=pointer]:
+              - generic [ref=e814]: Body_upload_image_api_upload_post
+              - img [ref=e816]
+            - button "Expand all" [ref=e818] [cursor=pointer]
+            - strong [ref=e819]: object
+        - article [ref=e820]:
+          - generic [ref=e821]:
+            - button "CharacterCreateRequest" [ref=e822] [cursor=pointer]:
+              - generic [ref=e824]: CharacterCreateRequest
+              - img [ref=e826]
+            - button "Expand all" [ref=e828] [cursor=pointer]
+            - strong [ref=e829]: object
+        - article [ref=e830]:
+          - generic [ref=e831]:
+            - button "CharacterResponse" [ref=e832] [cursor=pointer]:
+              - generic [ref=e834]: CharacterResponse
+              - img [ref=e836]
+            - button "Expand all" [ref=e838] [cursor=pointer]
+            - strong [ref=e839]: object
+        - article [ref=e840]:
+          - generic [ref=e841]:
+            - button "ChatRequest" [ref=e842] [cursor=pointer]:
+              - generic [ref=e844]: ChatRequest
+              - img [ref=e846]
+            - button "Expand all" [ref=e848] [cursor=pointer]
+            - strong [ref=e849]: object
+        - article [ref=e850]:
+          - generic [ref=e851]:
+            - button "ChatResponse" [ref=e852] [cursor=pointer]:
+              - generic [ref=e854]: ChatResponse
+              - img [ref=e856]
+            - button "Expand all" [ref=e858] [cursor=pointer]
+            - strong [ref=e859]: object
+        - article [ref=e860]:
+          - generic [ref=e861]:
+            - button "CloudinarySignatureRequest" [ref=e862] [cursor=pointer]:
+              - generic [ref=e864]: CloudinarySignatureRequest
+              - img [ref=e866]
+            - button "Expand all" [ref=e868] [cursor=pointer]
+            - strong [ref=e869]: object
+        - article [ref=e870]:
+          - generic [ref=e871]:
+            - button "CloudinarySignatureResponse" [ref=e872] [cursor=pointer]:
+              - generic [ref=e874]: CloudinarySignatureResponse
+              - img [ref=e876]
+            - button "Expand all" [ref=e878] [cursor=pointer]
+            - strong [ref=e879]: object
+        - article [ref=e880]:
+          - generic [ref=e881]:
+            - button "CloudinaryUploadResponse" [ref=e882] [cursor=pointer]:
+              - generic [ref=e884]: CloudinaryUploadResponse
+              - img [ref=e886]
+            - button "Expand all" [ref=e888] [cursor=pointer]
+            - strong [ref=e889]: object
+        - article [ref=e890]:
+          - generic [ref=e891]:
+            - button "CreditsResponse" [ref=e892] [cursor=pointer]:
+              - generic [ref=e894]: CreditsResponse
+              - img [ref=e896]
+            - button "Expand all" [ref=e898] [cursor=pointer]
+            - strong [ref=e899]: object
+        - article [ref=e900]:
+          - generic [ref=e901]:
+            - button "ExpressionBulkUpdateRequest" [ref=e902] [cursor=pointer]:
+              - generic [ref=e904]: ExpressionBulkUpdateRequest
+              - img [ref=e906]
+            - button "Expand all" [ref=e908] [cursor=pointer]
+            - strong [ref=e909]: object
+        - article [ref=e910]:
+          - generic [ref=e911]:
+            - button "ExpressionResponse" [ref=e912] [cursor=pointer]:
+              - generic [ref=e914]: ExpressionResponse
+              - img [ref=e916]
+            - button "Expand all" [ref=e918] [cursor=pointer]
+            - strong [ref=e919]: object
+        - article [ref=e920]:
+          - generic [ref=e921]:
+            - button "ExpressionUpdateItem" [ref=e922] [cursor=pointer]:
+              - generic [ref=e924]: ExpressionUpdateItem
+              - img [ref=e926]
+            - button "Expand all" [ref=e928] [cursor=pointer]
+            - strong [ref=e929]: object
+        - article [ref=e930]:
+          - generic [ref=e931]:
+            - button "HTTPValidationError" [ref=e932] [cursor=pointer]:
+              - generic [ref=e934]: HTTPValidationError
+              - img [ref=e936]
+            - button "Expand all" [ref=e938] [cursor=pointer]
+            - strong [ref=e939]: object
+        - article [ref=e940]:
+          - generic [ref=e941]:
+            - button "LegalConsentRequest" [ref=e942] [cursor=pointer]:
+              - generic [ref=e944]: LegalConsentRequest
+              - img [ref=e946]
+            - button "Expand all" [ref=e948] [cursor=pointer]
+            - strong [ref=e949]: object
+        - article [ref=e950]:
+          - generic [ref=e951]:
+            - button "LegalConsentStatusResponse" [ref=e952] [cursor=pointer]:
+              - generic [ref=e954]: LegalConsentStatusResponse
+              - img [ref=e956]
+            - button "Expand all" [ref=e958] [cursor=pointer]
+            - strong [ref=e959]: object
+        - article [ref=e960]:
+          - generic [ref=e961]:
+            - button "LoginRequest" [ref=e962] [cursor=pointer]:
+              - generic [ref=e964]: LoginRequest
+              - img [ref=e966]
+            - button "Expand all" [ref=e968] [cursor=pointer]
+            - strong [ref=e969]: object
+        - article [ref=e970]:
+          - generic [ref=e971]:
+            - button "PlayerTurnRequest" [ref=e972] [cursor=pointer]:
+              - generic [ref=e974]: PlayerTurnRequest
+              - img [ref=e976]
+            - button "Expand all" [ref=e978] [cursor=pointer]
+            - strong [ref=e979]: object
+        - article [ref=e980]:
+          - generic [ref=e981]:
+            - button "RegisterRequest" [ref=e982] [cursor=pointer]:
+              - generic [ref=e984]: RegisterRequest
+              - img [ref=e986]
+            - button "Expand all" [ref=e988] [cursor=pointer]
+            - strong [ref=e989]: object
+        - article [ref=e990]:
+          - generic [ref=e991]:
+            - button "RoleUpdateRequest" [ref=e992] [cursor=pointer]:
+              - generic [ref=e994]: RoleUpdateRequest
+              - img [ref=e996]
+            - button "Expand all" [ref=e998] [cursor=pointer]
+            - strong [ref=e999]: object
+        - article [ref=e1000]:
+          - generic [ref=e1001]:
+            - button "RuleResponse" [ref=e1002] [cursor=pointer]:
+              - generic [ref=e1004]: RuleResponse
+              - img [ref=e1006]
+            - button "Expand all" [ref=e1008] [cursor=pointer]
+            - strong [ref=e1009]: object
+        - article [ref=e1010]:
+          - generic [ref=e1011]:
+            - button "RulesBulkUpdateRequest" [ref=e1012] [cursor=pointer]:
+              - generic [ref=e1014]: RulesBulkUpdateRequest
+              - img [ref=e1016]
+            - button "Expand all" [ref=e1018] [cursor=pointer]
+            - strong [ref=e1019]: object
+        - article [ref=e1020]:
+          - generic [ref=e1021]:
+            - button "SceneCreateRequest" [ref=e1022] [cursor=pointer]:
+              - generic [ref=e1024]: SceneCreateRequest
+              - img [ref=e1026]
+            - button "Expand all" [ref=e1028] [cursor=pointer]
+            - strong [ref=e1029]: object
+        - article [ref=e1030]:
+          - generic [ref=e1031]:
+            - button "SceneResponse" [ref=e1032] [cursor=pointer]:
+              - generic [ref=e1034]: SceneResponse
+              - img [ref=e1036]
+            - button "Expand all" [ref=e1038] [cursor=pointer]
+            - strong [ref=e1039]: object
+        - article [ref=e1040]:
+          - generic [ref=e1041]:
+            - button "SessionResponse" [ref=e1042] [cursor=pointer]:
+              - generic [ref=e1044]: SessionResponse
+              - img [ref=e1046]
+            - button "Expand all" [ref=e1048] [cursor=pointer]
+            - strong [ref=e1049]: object
+        - article [ref=e1050]:
+          - generic [ref=e1051]:
+            - button "SessionStartRequest" [ref=e1052] [cursor=pointer]:
+              - generic [ref=e1054]: SessionStartRequest
+              - img [ref=e1056]
+            - button "Expand all" [ref=e1058] [cursor=pointer]
+            - strong [ref=e1059]: object
+        - article [ref=e1060]:
+          - generic [ref=e1061]:
+            - button "StartingBackgroundRequest" [ref=e1062] [cursor=pointer]:
+              - generic [ref=e1064]: StartingBackgroundRequest
+              - img [ref=e1066]
+            - button "Expand all" [ref=e1068] [cursor=pointer]
+            - strong [ref=e1069]: object
+        - article [ref=e1070]:
+          - generic [ref=e1071]:
+            - button "TriggerCreateRequest" [ref=e1072] [cursor=pointer]:
+              - generic [ref=e1074]: TriggerCreateRequest
+              - img [ref=e1076]
+            - button "Expand all" [ref=e1078] [cursor=pointer]
+            - strong [ref=e1079]: object
+        - article [ref=e1080]:
+          - generic [ref=e1081]:
+            - button "TriggerResponse" [ref=e1082] [cursor=pointer]:
+              - generic [ref=e1084]: TriggerResponse
+              - img [ref=e1086]
+            - button "Expand all" [ref=e1088] [cursor=pointer]
+            - strong [ref=e1089]: object
+        - article [ref=e1090]:
+          - generic [ref=e1091]:
+            - button "TurnResponse" [ref=e1092] [cursor=pointer]:
+              - generic [ref=e1094]: TurnResponse
+              - img [ref=e1096]
+            - button "Expand all" [ref=e1098] [cursor=pointer]
+            - strong [ref=e1099]: object
+        - article [ref=e1100]:
+          - generic [ref=e1101]:
+            - button "UserAdminResponse" [ref=e1102] [cursor=pointer]:
+              - generic [ref=e1104]: UserAdminResponse
+              - img [ref=e1106]
+            - button "Expand all" [ref=e1108] [cursor=pointer]
+            - strong [ref=e1109]: object
+        - article [ref=e1110]:
+          - generic [ref=e1111]:
+            - button "UserPrivateResponse" [ref=e1112] [cursor=pointer]:
+              - generic [ref=e1114]: UserPrivateResponse
+              - img [ref=e1116]
+            - button "Expand all" [ref=e1118] [cursor=pointer]
+            - strong [ref=e1119]: object
+        - article [ref=e1120]:
+          - generic [ref=e1121]:
+            - button "UserPublicResponse" [ref=e1122] [cursor=pointer]:
+              - generic [ref=e1124]: UserPublicResponse
+              - img [ref=e1126]
+            - button "Expand all" [ref=e1128] [cursor=pointer]
+            - strong [ref=e1129]: object
+        - article [ref=e1130]:
+          - generic [ref=e1131]:
+            - button "ValidationError" [ref=e1132] [cursor=pointer]:
+              - generic [ref=e1134]: ValidationError
+              - img [ref=e1136]
+            - button "Expand all" [ref=e1138] [cursor=pointer]
+            - strong [ref=e1139]: object

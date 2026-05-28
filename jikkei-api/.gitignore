@@ -1,0 +1,16 @@
+# Environment variables (contains real credentials: DB password, JWT
+# secret, Cloudinary, OpenRouter, Stripe keys — never commit this file)
+.env
+
+# Python
+__pycache__/
+*.pyc
+.venv312/
+.venv/
+*.egg-info/
+
+# Test artifacts
+.pytest_cache/
+
+# Logs
+*.log

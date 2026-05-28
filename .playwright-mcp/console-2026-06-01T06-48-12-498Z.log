@@ -1,0 +1,14 @@
+[     195ms] [INFO] %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold @ http://localhost:5173/node_modules/.vite/deps/react-dom_client.js?v=9ab438d9:14337
+[     384ms] [ERROR] Failed to load resource: the server responded with a status of 401 (Unauthorized) @ http://localhost:8000/auth/me:0
+[     399ms] [ERROR] Failed to load resource: the server responded with a status of 401 (Unauthorized) @ http://localhost:8000/auth/refresh:0
+[     860ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o @ http://localhost:5173/auth:0
+[   15398ms] [ERROR] Access to XMLHttpRequest at 'http://localhost:8000/auth/login' from origin 'http://localhost:5173' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://localhost:5173/auth:0
+[   15418ms] [ERROR] Failed to load resource: net::ERR_FAILED @ http://localhost:8000/auth/login:0
+[  508694ms] [ERROR] Failed to load resource: the server responded with a status of 503 (Service Unavailable) @ http://localhost:8000/health:0
+[  508708ms] [ERROR] Access to fetch at 'http://localhost:8000/auth/login' from origin 'http://localhost:5173' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://localhost:5173/auth:0
+[  508710ms] [ERROR] Failed to load resource: net::ERR_FAILED @ http://localhost:8000/auth/login:0
+[  632547ms] [ERROR] Failed to load resource: the server responded with a status of 503 (Service Unavailable) @ http://localhost:8000/health:0
+[  632563ms] [ERROR] Access to fetch at 'http://localhost:8000/auth/login' from origin 'http://localhost:5173' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource. @ http://localhost:5173/auth:0
+[  632563ms] [ERROR] Failed to load resource: net::ERR_FAILED @ http://localhost:8000/auth/login:0
+[  641529ms] [VERBOSE] [DOM] Input elements should have autocomplete attributes (suggested: "current-password"): (More info: https://goo.gl/9p2vKq) %o @ http://localhost:5173/auth:0
+[  676098ms] [ERROR] Failed to load resource: the server responded with a status of 401 (Unauthorized) @ http://127.0.0.1:8001/auth/me:0

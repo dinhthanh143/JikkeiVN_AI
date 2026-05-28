@@ -1,0 +1,40 @@
+{
+  "servers": {
+    "supabase": {
+      "type": "http",
+      "url": "https://mcp.supabase.com/mcp",
+      "params": {
+        "project_ref": "qlnctytdenarswxudodo"
+      }
+    },
+    "github": {
+      "type": "http",
+      "url": "https://api.githubcopilot.com/mcp"
+    },
+    "context7": {
+      "type": "http",
+      "url": "https://mcp.context7.com/mcp"
+    },
+    "playwright": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@playwright/mcp"]
+    },
+    "codegraph": {
+      "type": "stdio",
+      "command": "npx",
+      "args": ["-y", "@optave/codegraph", "mcp"],
+      "env": {
+        "CODEGRAPH_ROOT": "D:\\BotTest\\JikkeiNovelAI"
+      }
+    },
+     "codebase-memory-jikkei": {
+      "command": "codebase-memory-mcp",
+      "args": ["--project", "D:/BotTest/JikkeiNovelAI"]
+      , "env": {
+    "CBM_LOG_LEVEL": "debug"
+  }
+    }
+
+  }
+}

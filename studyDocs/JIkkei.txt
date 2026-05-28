@@ -1,0 +1,14 @@
+JIkkei
+Pinned files:
+Backend: main(middleware upgrade)
+
+remotion
+
+
+QUotes:
+Bạn phải cấu hình Server chỉ chấp nhận kết nối từ IP của Cloudflare.
+
+
+
+
+supabase : *R9cm6NJ3++45cJ
